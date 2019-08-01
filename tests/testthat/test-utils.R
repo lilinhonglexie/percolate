@@ -29,3 +29,12 @@ test_that("Board generation check", {
   expect_error(generate_board_mat(p = "hello"), "Invalid input p!")
   expect_error(generate_board_mat(p = c(1,1.4)), "Invalid input p!")
 })
+
+test_that("Is_valid for board check", {
+  expect_equal(is_valid(generate_board_mat()), TRUE)
+  expect_equal(is_valid(generate_board_mat(n=1)), TRUE)
+
+  expect_error(is_valid(1), "Invalid board.")
+  expect_error(is_valid(matrix(0, nrow = 2, ncol = 3)), "Invalid board.")
+  expect_error(is_valid(matrix(2, nrow = 3, ncol = 3)), "Invalid board.")
+})

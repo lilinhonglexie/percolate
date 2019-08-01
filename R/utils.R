@@ -23,4 +23,20 @@ generate_board_mat <- function(n=5, p=0.25){
   return(result_mat)
 }
 
-
+#' Checks if a board matrix is valid. By definition, a valid board matrix is
+#' a square matrix containing only 0 or 1. If the input is invalid, this function
+#' throws an error, otherwise it returns TRUE.
+#'
+#' @param board_mat Board matrix to be checked.
+#'
+#' @return Either throws an error or returns TRUE
+#' @export
+#'
+#' @examples is_valid(generate_board_mat())
+is_valid <- function(board_mat){
+  assert_that(is.matrix(board_mat), msg="Invalid board.")
+  assert_that(length(dim(board_mat)) == 2, msg="Invalid board.")
+  assert_that(dim(board_mat)[1] == dim(board_mat)[2], msg="Invalid board.")
+  assert_that(sum(board_mat != 0 & board_mat != 1) == 0, msg="Invalid board.")
+  TRUE
+}
