@@ -13,12 +13,14 @@ library(assertthat)
 #'
 #' @export
 generate_board_mat <- function(n=5, p=0.25){
-  assert_that(n > 0)
-  assert_that(0 <= p && p <= 1)
+  assert_that(is.number(n) && n > 0 && round(n) == n, msg = "Invalid input n!")
+  assert_that(is.number(p) && 0 <= p && p <= 1, msg = "Invalid input p!")
   n_blocked <- floor(p*n^2)
   blocked_ids <- sample(seq(n^2), n_blocked, replace = FALSE)
-  result_vec <- integer(n^2)
-  result_vec[blocked_ids] <- 1
+  result_vec <- integer(n^2) + 1
+  result_vec[blocked_ids] <- 0
   result_mat <- matrix(result_vec, nrow = n, ncol = n)
   return(result_mat)
 }
+
+
