@@ -1,6 +1,3 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
-})
 
 test_that("Board generation check", {
   default_board <- generate_board_mat()
@@ -38,3 +35,19 @@ test_that("Is_valid for board check", {
   expect_error(is_valid(matrix(0, nrow = 2, ncol = 3)), "Invalid board.")
   expect_error(is_valid(matrix(2, nrow = 3, ncol = 3)), "Invalid board.")
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
