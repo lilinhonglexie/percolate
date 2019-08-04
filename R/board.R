@@ -1,4 +1,6 @@
 
+#' Board Class Constructor
+#'
 #' Class constructor function for the class "board".
 #'
 #' @param mat If not NULL, contains a board matrix.

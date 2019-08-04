@@ -2,7 +2,7 @@
 % Please edit documentation in R/board.R
 \name{board}
 \alias{board}
-\title{Class constructor function for the class "board".}
+\title{Board Class Constructor}
 \usage{
 board(mat = NULL, n = 5, p = 0.25)
 }

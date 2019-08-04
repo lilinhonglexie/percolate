@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{generate_board_mat}
 \alias{generate_board_mat}
-\title{Generate a legal board per inputted instructions.}
+\title{Board Generation}
 \usage{
 generate_board_mat(n = 5, p = 0.25)
 }
@@ -13,10 +13,10 @@ generate_board_mat(n = 5, p = 0.25)
 of the n^2 squares are blocked}
 }
 \value{
-The n-by-n board with floor(p*n^2) blocked squares
+The n-by-n board matrix with floor(p*n^2) blocked squares
 }
 \description{
-Generate a legal board per inputted instructions.
+Randomly generate a legal, dry board per inputted instructions.
 }
 \examples{
 generate_board_mat(n = 8, p = 0.75)

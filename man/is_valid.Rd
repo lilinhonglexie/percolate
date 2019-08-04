@@ -2,9 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{is_valid}
 \alias{is_valid}
-\title{Checks if a board matrix is valid. By definition, a valid board matrix is
-a square matrix containing only 0, 1 and 2s. If the input is invalid, this
-function throws an error, otherwise it returns TRUE.}
+\title{Board Validity Check}
 \usage{
 is_valid(board_mat)
 }
