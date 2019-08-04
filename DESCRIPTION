@@ -14,5 +14,9 @@ LazyData: true
 Suggests: 
     testthat (>= 2.1.0)
 Imports: 
-    assertthat
+    assertthat,
+    dplyr,
+    tidyr,
+    reshape2,
+    ggplot2
 RoxygenNote: 6.1.1

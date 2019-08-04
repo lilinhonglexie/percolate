@@ -7,7 +7,7 @@ test_that("Board constructor check.", {
   expect_equal(attr(some_board_from_func, "p"), floor(0.25*5^2)/5^2)
 
   error_board <- generate_board_mat()
-  error_board[1,1] <- 2
+  error_board[1,1] <- 3
   expect_error(is_valid(error_board), "Invalid board.")
   expect_error(board(mat=error_board), "Invalid board.")
 

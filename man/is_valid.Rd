@@ -3,8 +3,8 @@
 \name{is_valid}
 \alias{is_valid}
 \title{Checks if a board matrix is valid. By definition, a valid board matrix is
-a square matrix containing only 0 or 1. If the input is invalid, this function
-throws an error, otherwise it returns TRUE.}
+a square matrix containing only 0, 1 and 2s. If the input is invalid, this
+function throws an error, otherwise it returns TRUE.}
 \usage{
 is_valid(board_mat)
 }
@@ -16,8 +16,8 @@ Either throws an error or returns TRUE
 }
 \description{
 Checks if a board matrix is valid. By definition, a valid board matrix is
-a square matrix containing only 0 or 1. If the input is invalid, this function
-throws an error, otherwise it returns TRUE.
+a square matrix containing only 0, 1 and 2s. If the input is invalid, this
+function throws an error, otherwise it returns TRUE.
 }
 \examples{
 is_valid(generate_board_mat())
