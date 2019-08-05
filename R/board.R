@@ -15,9 +15,9 @@
 board <- function(mat = NULL, n = 5, p = .25){
   if (is.null(mat)){
     mat <- generate_board_mat(n, p)
-    assert_that(is_valid(mat))
+    assertthat::assert_that(is_valid(mat))
   } else {
-    assert_that(is_valid(mat))
+    assertthat::assert_that(is_valid(mat))
     n <- dim(mat)[1]
     p <- (length(mat) - sum(mat))/length(mat)  # empirical percentage of 0's
   }
