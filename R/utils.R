@@ -36,7 +36,9 @@ generate_board_mat <- function(n=5, p=0.25){
 #' @return Either throws an error or returns TRUE
 #' @export
 #'
-#' @examples is_valid(generate_board_mat())
+#' @examples
+#' is_valid(generate_board_mat()) # should return TRUE
+#' is_valid(generate_board_mat(n=1)) # should return TRUE
 is_valid <- function(board_mat){
   assertthat::assert_that(is.matrix(board_mat), msg="Invalid board.")
   assertthat::assert_that(length(dim(board_mat)) == 2, msg="Invalid board.")
@@ -117,7 +119,7 @@ read_boards <- function(file){
 #' @examples
 char_to_board <- function(board_as_char){
   n <- board_as_char[2]
-  if (grepl("\\D", n)) {
+  if (grepl("\\D", n) || n <= 0) {
     return(NA)   # contains non-digit
   }
   n <- as.integer(n)

@@ -18,5 +18,6 @@ a square matrix containing only 0, 1 and 2s. If the input is invalid, this
 function throws an error, otherwise it returns TRUE.
 }
 \examples{
-is_valid(generate_board_mat())
+is_valid(generate_board_mat()) # should return TRUE
+is_valid(generate_board_mat(n=1)) # should return TRUE
 }

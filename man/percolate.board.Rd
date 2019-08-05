@@ -40,7 +40,9 @@ mat_example_list <- list(matrix(c(1,1,1,1,0,
                                   0,1,1,1,1), 5, 5))
 board_example_list <- lapply(mat_example_list, board)
 percolate_result_list <- lapply(board_example_list, percolate)
-# display boolean results
+
+# display boolean results (TRUE, TRUE, FALSE)
+# The first two boards should percolate, whereas the last board should not.
 sapply(percolate_result_list, function(percolate_result){
   percolate_result$result
   })
