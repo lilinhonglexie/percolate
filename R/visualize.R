@@ -48,7 +48,7 @@
 #'              0, 1, 1, 0, 0, 1, 0, 1, 0, 0),
 #'              10, 10))
 #' plot(board_example4, grid=TRUE)
-plot.board <- function(board, grid){
+plot.board <- function(board, grid=TRUE){
   is_valid(board)
   n <- attr(board, "n")
   board_outline <- ifelse(grid, "dashed", "blank")

@@ -4,7 +4,7 @@
 \alias{plot.board}
 \title{Board Visualization}
 \usage{
-\method{plot}{board}(board, grid)
+\method{plot}{board}(board, grid = TRUE)
 }
 \arguments{
 \item{board:}{a board object. An error will occur if the inputted board is
