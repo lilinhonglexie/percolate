@@ -37,18 +37,17 @@ test_that("Is_valid for board check", {
   expect_error(is_valid(matrix(3, nrow = 3, ncol = 3)), "Invalid board.")
 })
 
+test_that("Read Board Works", {
+  load(url("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolate_test.Rdata"))
+  target_boards <- board_list
+  generated_boards <-
+    read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test.txt")
+  expect_true(identical(target_boards, generated_boards))
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+test_that("Read Board Correctly Handles Wrong Boards", {
+  for (i in 1:6){
+    expect_true(identical(list(NA),
+      read_boards(sprintf("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test%d.txt", i))))
+  }
+})
