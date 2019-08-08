@@ -1,5 +1,17 @@
 
-percolate <- function(x, ...) UseMethod("percolate")
+#' S3 Method Function Definition
+#'
+#' @param x
+#' @param ...
+#'
+#' @return
+#' @export
+#'
+#' @examples
+percolate <- function(x, ...){
+  UseMethod("percolate")
+}
+
 
 #' Board Percolation
 #'
