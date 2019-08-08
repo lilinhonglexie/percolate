@@ -2,6 +2,7 @@
 
 S3method(percolate,board)
 S3method(plot,board)
+export("%>%")
 export(board)
 export(char_row_to_board_row)
 export(char_to_board)
@@ -12,3 +13,4 @@ export(percolate)
 export(percolate_fill)
 export(percolate_step)
 export(read_boards)
+importFrom(magrittr,"%>%")

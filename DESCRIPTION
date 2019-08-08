@@ -18,5 +18,6 @@ Imports:
     dplyr,
     tidyr,
     reshape2,
-    ggplot2
+    ggplot2,
+    magrittr
 RoxygenNote: 6.1.1
